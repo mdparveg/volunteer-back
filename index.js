@@ -17,7 +17,7 @@ app.use(fileUpload());
 
 const port = 5000
 
-// app.use(express.static)
+app.use(express.static('public'))
 
 
 
@@ -96,6 +96,4 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(port, () => {
-  console.log('port listening');
-})
+app.listen(process.env.PORT || port)
